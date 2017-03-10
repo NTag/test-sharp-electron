@@ -1,0 +1,33 @@
+{
+  "name": "test-sharp",
+  "version": "1.0.0",
+  "description": "Test Electron and Sharp",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.17.2"
+  },
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^15.2.0",
+    "electron-rebuild": "^1.5.7"
+  },
+  "build": {
+    "appId": "org.alltomp3.app",
+    "asarUnpack": [
+      "**/node_modules/sharp/**/*"
+    ],
+    "directories": {
+      "app": "."
+    }
+  },
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build",
+    "release": "build"
+  }
+}
